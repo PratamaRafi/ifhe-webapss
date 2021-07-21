@@ -3,11 +3,11 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-body {
+/* body {
   background-image: url(../img/background.png);
-}
+} */
 
-body {
+body::before {
   content: "";
   background-image: url(../img/background.png);
   background-position: top right;
@@ -15,14 +15,24 @@ body {
   background-position-y: 150px;
   background-size: 50vmax;
   position: absolute;
+  width: 100%;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
 }
 
-.custom-nav {
-  /* background-color: #7faaf7; */
+@media screen and (max-width: 992px) {
+  body::before {
+    margin-top: 0px;
+    opacity: 0.2;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .custom-section {
+    text-align: center;
+  }
 }
 
 .custom-nav #navbarNav .navbar-nav .nav-item .nav-link {
@@ -68,7 +78,87 @@ body {
 }
 
 .custom-section a:hover {
-  color: #7faaf7;
+  color: white;
   border: 1px solid #7faaf7;
-  background-color: transparent;
+  background-color: #415da5;
+}
+
+.collab {
+  background-color: #ebf3fa;
+  border-radius: 0.9em !important;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5) !important;
+}
+
+.info {
+  background-color: whitesmoke;
+  border-radius: 1em !important;
+  margin: 5px !important;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.3) !important;
+  padding: 1em;
+}
+
+.info-deputy {
+  background-color: #ebf3fa;
+  border-radius: 1em !important;
+  margin: 5px !important;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.3) !important;
+  padding: 1em;
+}
+
+.info-deputy p {
+  font-size: 1.3em;
+  text-align: justify;
+}
+
+@media screen and (max-width: 992px) {
+  .info-deputy {
+    margin-top: 1em;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .info-deputy p {
+    font-size: 1rem;
+  }
+}
+
+.info-deputy a {
+  display: inline-block;
+  color: white;
+  background-color: #7faaf7;
+  border-radius: 1.5em;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  border: 1px solid transparent;
+  font-weight: 500;
+  margin-left: 15em;
+}
+
+.info-deputy a:hover {
+  color: white;
+  border: 1px solid #7faaf7;
+  background-color: #415da5;
+}
+
+@media screen and (max-width: 992px) {
+  .info-deputy a {
+    margin-left: auto;
+  }
+}
+
+.text-info {
+  text-align: center;
+  color: #212529 !important;
+}
+
+.member-img {
+  border-radius: 1em;
+  height: 357px;
+  width: 268px;
+  /* margin-left: 150px; */
+  -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.7);
+  /* margin-bottom: 100px; */
 }
