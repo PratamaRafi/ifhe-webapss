@@ -70,6 +70,7 @@ body::before {
 }
 
 .custom-section a {
+  cursor: pointer;
   display: inline-block;
   color: white;
   background-color: #7faaf7;
